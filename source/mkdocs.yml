@@ -9,17 +9,18 @@ site_author: 林小北不是小杯杯🍥
 # Material主题设置
 theme:
   name: material
+  language: zh
   # 浅色/深色切换
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: 切换深色模式
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: blue
       toggle:
         icon: material/brightness-4
         name: 切换浅色模式
@@ -37,6 +38,7 @@ theme:
 # Markdown扩展语法：提示框、折叠块、Mermaid流程图
 markdown_extensions:
   - admonition
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -55,6 +57,8 @@ nav:
   - 资源下载: download.md
   - 参考文档: reference.md
 
-# 自定义CSS/JS（后续美化用）
-extra_css: []
-extra_javascript: []
+# 自定义CSS/JS（蓝色主题美化）
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js

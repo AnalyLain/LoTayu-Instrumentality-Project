@@ -1,0 +1,308 @@
+/* =========================================================
+   蓝色主题自定义样式（浅色 / 深色）
+   灵感来源：msime.app 的设计语言
+   ========================================================= */
+
+/* ---------- 字体 ---------- */
+:root {
+  --md-text-font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei",
+    -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --md-code-font-family: "Cascadia Code", Consolas, "SF Mono", Menlo,
+    Monaco, "Liberation Mono", monospace;
+}
+
+/* ---------- 浅色主题 ---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #2563eb;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1d4ed8;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+
+  --md-accent-fg-color: #2563eb;
+
+  --md-default-bg-color: #f4f7fb;
+  --md-default-fg-color: #132238;
+  --md-default-fg-color--light: #3a4a5e;
+  --md-default-fg-color--lighter: #62758a;
+  --md-default-fg-color--lightest: #8fa0b5;
+
+  --md-typeset-color: #3a4a5e;
+  --md-typeset-a-color: #1d4ed8;
+  --md-code-bg-color: #eaf0f7;
+
+  --md-footer-bg-color: #0d1b2e;
+  --md-footer-bg-color--dark: #0d1b2e;
+  --md-footer-fg-color: #b7c6da;
+
+  --md-shadow-z1: 0 1px 2px rgba(13, 27, 46, 0.06),
+    0 4px 16px rgba(13, 27, 46, 0.08);
+  --md-shadow-z2: 0 2px 4px rgba(13, 27, 46, 0.08),
+    0 12px 28px rgba(13, 27, 46, 0.1);
+  --md-shadow-z3: 0 4px 8px rgba(13, 27, 46, 0.1),
+    0 20px 40px rgba(13, 27, 46, 0.12);
+
+  /* 站点自定义令牌 */
+  --site-card-bg: #ffffff;
+  --site-card-border: rgba(19, 34, 56, 0.08);
+  --site-card-title: #132238;
+  --site-card-desc: #62758a;
+  --site-hover-bg: rgba(37, 99, 235, 0.06);
+}
+
+/* ---------- 深色主题 ---------- */
+[data-md-color-scheme="slate"] {
+  color-scheme: dark;
+
+  --md-primary-fg-color: #14243c;
+  --md-primary-fg-color--light: #1b3050;
+  --md-primary-fg-color--dark: #0d1b2e;
+  --md-primary-bg-color: #eef4fb;
+  --md-primary-bg-color--light: #eef4fb;
+
+  --md-accent-fg-color: #7fb3f0;
+
+  --md-default-bg-color: #0c1420;
+  --md-default-fg-color: #e6edf6;
+  --md-default-fg-color--light: #c3cfdc;
+  --md-default-fg-color--lighter: #8fa0b5;
+  --md-default-fg-color--lightest: #64748b;
+
+  --md-typeset-color: #c3cfdc;
+  --md-typeset-a-color: #7fb3f0;
+  --md-code-bg-color: #0f1b2b;
+  --md-code-fg-color: #dbe7f5;
+
+  --md-footer-bg-color: #080e18;
+  --md-footer-bg-color--dark: #080e18;
+  --md-footer-fg-color: #8fa0b5;
+
+  --md-shadow-z1: 0 1px 2px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+  --md-shadow-z2: 0 2px 6px rgba(0, 0, 0, 0.45),
+    0 16px 40px rgba(0, 0, 0, 0.45);
+  --md-shadow-z3: 0 4px 12px rgba(0, 0, 0, 0.5),
+    0 24px 56px rgba(0, 0, 0, 0.5);
+
+  /* 站点自定义令牌 */
+  --site-card-bg: #14233a;
+  --site-card-border: rgba(255, 255, 255, 0.08);
+  --site-card-title: #eef4fb;
+  --site-card-desc: #8fa0b5;
+  --site-hover-bg: rgba(127, 179, 240, 0.1);
+}
+
+/* ---------- 排版微调 ---------- */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* ---------- 按钮：胶囊 + 悬停上浮 ---------- */
+.md-button {
+  border-radius: 999px;
+  transition: transform 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+    background-color 0.15s, border-color 0.15s;
+}
+
+.md-button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--md-shadow-z2);
+}
+
+/* ---------- 首页 Hero ---------- */
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: clamp(32px, 6vw, 64px) clamp(24px, 5vw, 56px);
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #0b2a5b 0%,
+    #1d4ed8 55%,
+    #3b82f6 100%
+  );
+  box-shadow: var(--md-shadow-z2);
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -8%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(147, 197, 253, 0.55),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.home-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: #eaf2fd;
+  backdrop-filter: blur(4px);
+}
+
+.hero-title {
+  margin: 18px 0 12px;
+  font-size: clamp(30px, 6vw, 54px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.hero-sub {
+  max-width: 640px;
+  margin: 0 0 26px;
+  font-size: clamp(15px, 2vw, 19px);
+  line-height: 1.7;
+  color: rgba(234, 242, 253, 0.88);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-btn-ghost {
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background: transparent !important;
+}
+
+.hero-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ---------- 首页卡片网格 ---------- */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 20px;
+  border: 1px solid var(--site-card-border);
+  border-radius: 16px;
+  background: var(--site-card-bg);
+  box-shadow: var(--md-shadow-z1);
+  text-decoration: none !important;
+  transition: transform 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.15s;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: var(--md-shadow-z2);
+}
+
+.home-card-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+.home-card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--site-card-title);
+}
+
+.home-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--site-card-desc);
+}
+
+/* ---------- 滚动入场动画 ---------- */
+/* 默认可见；仅当 JS 可用时才启用“先隐藏再淡入”，避免无 JS 时内容空白 */
+.reveal {
+  transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+html.reveal-ready .reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .home-card,
+  .md-button {
+    transition: none;
+  }
+}
+
+/* ---------- 链接悬停微动效 ---------- */
+.md-typeset a:not(.md-button):not(.home-card) {
+  transition: color 0.15s;
+}
+
+/* ---------- 导航与搜索框更柔和 ---------- */
+.md-tabs__link,
+.md-header {
+  transition: background-color 0.2s;
+}
+
+.md-search__form {
+  border-radius: 999px;
+}
+
+/* ---------- 代码块圆角 ---------- */
+.md-typeset code,
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+/* ---------- 提示框圆角 ---------- */
+.md-typeset .admonition {
+  border-radius: 12px;
+}
