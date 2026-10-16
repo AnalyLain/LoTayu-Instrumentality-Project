@@ -3,8 +3,8 @@ site_name: 特异人士 Wiki
 site_description: 罗大佑知识库与资源站
 site_author: 林小北不是小杯杯🍥
 
-# 上线后改成你的pages.dev域名
-site_url: https://te-yi-ren-shi.pages.dev/
+# 拿到 Cloudflare 分配的 .pages.dev 域名后，可取消下面注释并填入真实地址（不填也能正常打开，用相对链接）
+# site_url: https://你的项目.pages.dev/
 
 # Material主题设置
 theme:
