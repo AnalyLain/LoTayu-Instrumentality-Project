@@ -1,0 +1,61 @@
+# 网站标题
+site_name: 特异人士 Wiki
+site_description: 罗大佑知识库与资源站
+site_author: 林小北不是小杯杯🍥
+
+# 上线后改成你的pages.dev域名
+site_url: https://te-yi-ren-shi.pages.dev/
+
+# Material主题设置
+theme:
+  name: material
+  # 浅色/深色切换
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+  icon:
+    logo: material/library
+  features:
+    - navigation.tabs          # 顶部导航标签
+    - navigation.sections      # 侧边栏分组折叠
+    - navigation.expand        # 默认展开侧边目录
+    - navigation.top           # 返回顶部按钮
+    - search.suggest           # 搜索联想
+    - search.highlight         # 搜索关键词高亮
+    - content.code.copy        # 代码块一键复制按钮
+
+# Markdown扩展语法：提示框、折叠块、Mermaid流程图
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true # 标题生成锚点链接
+
+# 插件
+plugins:
+  - search
+
+# 侧边导航菜单（在这里添加你的Wiki页面）
+nav:
+  - 首页: index.md
+  - 项目介绍: intro.md
+  - 资源下载: download.md
+  - 参考文档: reference.md
+
+# 自定义CSS/JS（后续美化用）
+extra_css: []
+extra_javascript: []
+site_name: My Docs
