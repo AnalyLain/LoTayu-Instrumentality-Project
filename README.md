@@ -1,4 +1,4 @@
-# “ 今天拼了！！！”
+# LoTayu-Instrumentality-Project 罗大佑补完计划
 >本项目为共建项目，项目目前处于建站阶段。
 >请一定阅读README最后的“我想说的”板块qwq
 
