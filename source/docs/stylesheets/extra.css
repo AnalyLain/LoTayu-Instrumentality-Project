@@ -306,3 +306,62 @@ html.reveal-ready .reveal.revealed {
 .md-typeset .admonition {
   border-radius: 12px;
 }
+
+/* ---------- 语言切换按钮 ---------- */
+.lang-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-switch__btn {
+  cursor: pointer;
+}
+
+.lang-switch__menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 168px;
+  padding: 6px;
+  border: 1px solid var(--site-card-border);
+  border-radius: 12px;
+  background: var(--site-card-bg);
+  box-shadow: var(--md-shadow-z2);
+  display: none;
+  z-index: 20;
+}
+
+.lang-switch.is-open .lang-switch__menu {
+  display: block;
+}
+
+.lang-switch__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--site-card-title);
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.lang-switch__item:hover {
+  background: var(--site-hover-bg);
+}
+
+.lang-switch__item.is-current {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+.lang-switch__check {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
