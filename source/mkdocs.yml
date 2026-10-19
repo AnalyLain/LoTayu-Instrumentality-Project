@@ -54,8 +54,10 @@ plugins:
 nav:
   - 首页: index.md
   - 项目介绍: intro.md
+  - 曲目百科: songs.md
+  - 老罗往事: stories.md
   - 资源下载: download.md
-  - 参考文档: reference.md
+  - 鸣谢: thanks.md
 
 # 自定义CSS/JS（蓝色主题美化）
 extra_css:

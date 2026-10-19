@@ -16,14 +16,24 @@
     <span class="home-card-title">项目介绍</span>
     <span class="home-card-desc">了解这个项目是什么、为什么做，以及整体的内容架构。</span>
   </a>
-  <a class="home-card reveal" href="download/">
+  <a class="home-card reveal" href="songs/">
     <span class="home-card-kicker">02</span>
+    <span class="home-card-title">曲目百科</span>
+    <span class="home-card-desc">按年代、专辑、题材梳理罗大佑的曲目索引。</span>
+  </a>
+  <a class="home-card reveal" href="stories/">
+    <span class="home-card-kicker">03</span>
+    <span class="home-card-title">老罗往事</span>
+    <span class="home-card-desc">关于罗大佑的轶事、故事与时代背景。</span>
+  </a>
+  <a class="home-card reveal" href="download/">
+    <span class="home-card-kicker">04</span>
     <span class="home-card-title">资源下载</span>
     <span class="home-card-desc">MV、MIDI、乐谱、伴奏等资源的归档与下载入口。</span>
   </a>
-  <a class="home-card reveal" href="reference/">
-    <span class="home-card-kicker">03</span>
-    <span class="home-card-title">参考文档</span>
-    <span class="home-card-desc">考据、文献、教程与各类参考资料的合集。</span>
+  <a class="home-card reveal" href="thanks/">
+    <span class="home-card-kicker">05</span>
+    <span class="home-card-title">鸣谢</span>
+    <span class="home-card-desc">感谢为本站提供资源、考据与帮助的朋友们。</span>
   </a>
 </div>
